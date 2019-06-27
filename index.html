@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("h4").hide();
+            });
+            $("#show").click(function(){
+                $("h4").show();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#anima").click(function(){
+                var div = $("div");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '50px'}, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+<h4> if you click on the "hide" button, I will disapear</h4>
+<button id="hide"> Hide</button>
+<button id="show"> show</button>
+<!--part2-->
+<br>
+<button id="anima">Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+</body>
+</html>
